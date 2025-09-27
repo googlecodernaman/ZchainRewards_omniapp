@@ -1,0 +1,43 @@
+{
+  "name": "zchain_rewards",
+  "version": "1.0.0",
+  "description": "An Omnichain Incentives/Rewards application built on ZetaChain that enables administrators to schedule USD-denominated payouts delivered as tokens on recipient-chosen destination chains.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "clean": "hardhat clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^4.0.1",
+    "@nomicfoundation/hardhat-mocha": "^3.0.2",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.5.2",
+    "chai": "^5.1.2",
+    "ethers": "^6.15.0",
+    "hardhat": "^3.0.6",
+    "mocha": "^11.0.0",
+    "prettier": "^3.6.2",
+    "solhint": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "~5.8.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "@zetachain/protocol-contracts": "^13.0.0"
+  },
+  "type": "module"
+}

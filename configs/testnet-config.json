@@ -1,0 +1,138 @@
+{
+  "description": "ZetaChain testnet configuration for Omnichain Rewards App",
+  "networks": {
+    "zetachain": {
+      "chainId": 7001,
+      "name": "ZetaChain Athens Testnet",
+      "rpcUrl": "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
+      "explorerUrl": "https://zetascan.com",
+      "nativeCurrency": {
+        "name": "ZETA",
+        "symbol": "ZETA",
+        "decimals": 18
+      },
+      "contracts": {
+        "gatewayZEVM": "0x6c533f7fe93fae114d0954697069df33c9b74fd7",
+        "omniRewards": "PLACEHOLDER_TO_BE_DEPLOYED"
+      }
+    },
+    "polygonMumbai": {
+      "chainId": 80001,
+      "name": "Polygon Mumbai Testnet",
+      "rpcUrl": "https://rpc-mumbai.maticvigil.com",
+      "explorerUrl": "https://mumbai.polygonscan.com",
+      "nativeCurrency": {
+        "name": "MATIC",
+        "symbol": "MATIC",
+        "decimals": 18
+      },
+      "contracts": {
+        "gateway": "PLACEHOLDER_GATEWAY_ADDRESS",
+        "omniReceiver": "PLACEHOLDER_TO_BE_DEPLOYED"
+      }
+    },
+    "baseSepolia": {
+      "chainId": 84532,
+      "name": "Base Sepolia Testnet",
+      "rpcUrl": "https://sepolia.base.org",
+      "explorerUrl": "https://sepolia.basescan.org",
+      "nativeCurrency": {
+        "name": "ETH",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "contracts": {
+        "gateway": "PLACEHOLDER_GATEWAY_ADDRESS",
+        "omniReceiver": "PLACEHOLDER_TO_BE_DEPLOYED"
+      }
+    },
+    "ethSepolia": {
+      "chainId": 11155111,
+      "name": "Ethereum Sepolia Testnet",
+      "rpcUrl": "https://sepolia.drpc.org",
+      "explorerUrl": "https://sepolia.etherscan.io",
+      "nativeCurrency": {
+        "name": "ETH",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "contracts": {
+        "gateway": "PLACEHOLDER_GATEWAY_ADDRESS",
+        "omniReceiver": "PLACEHOLDER_TO_BE_DEPLOYED"
+      }
+    }
+  },
+  "oracles": {
+    "pyth": {
+      "description": "Pyth Network oracle addresses (TO BE VERIFIED)",
+      "networks": {
+        "zetachain": "PLACEHOLDER_PYTH_ADDRESS",
+        "polygonMumbai": "PLACEHOLDER_PYTH_ADDRESS",
+        "baseSepolia": "PLACEHOLDER_PYTH_ADDRESS",
+        "ethSepolia": "PLACEHOLDER_PYTH_ADDRESS"
+      }
+    },
+    "chainlink": {
+      "description": "Chainlink oracle addresses (TO BE VERIFIED)",
+      "networks": {
+        "zetachain": "PLACEHOLDER_CHAINLINK_ADDRESS",
+        "polygonMumbai": "PLACEHOLDER_CHAINLINK_ADDRESS", 
+        "baseSepolia": "PLACEHOLDER_CHAINLINK_ADDRESS",
+        "ethSepolia": "PLACEHOLDER_CHAINLINK_ADDRESS"
+      }
+    }
+  },
+  "tokens": {
+    "whitelisted": [
+      {
+        "symbol": "USDC",
+        "name": "USD Coin",
+        "addresses": {
+          "zetachain": "PLACEHOLDER_ZRC20_USDC",
+          "polygonMumbai": "PLACEHOLDER_ERC20_USDC",
+          "baseSepolia": "PLACEHOLDER_ERC20_USDC",
+          "ethSepolia": "PLACEHOLDER_ERC20_USDC"
+        }
+      },
+      {
+        "symbol": "USDT",
+        "name": "Tether USD",
+        "addresses": {
+          "zetachain": "PLACEHOLDER_ZRC20_USDT",
+          "polygonMumbai": "PLACEHOLDER_ERC20_USDT",
+          "baseSepolia": "PLACEHOLDER_ERC20_USDT",
+          "ethSepolia": "PLACEHOLDER_ERC20_USDT"
+        }
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "addresses": {
+          "zetachain": "PLACEHOLDER_ZRC20_ETH",
+          "polygonMumbai": "PLACEHOLDER_WRAPPED_ETH",
+          "baseSepolia": "NATIVE",
+          "ethSepolia": "NATIVE"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "oracle": {
+      "stalenessThreshold": 3600,
+      "deviationThreshold": 500,
+      "description": "Staleness in seconds, deviation in basis points (500 = 5%)"
+    },
+    "gas": {
+      "limits": {
+        "onCall": 300000,
+        "onRevert": 200000,
+        "onAbort": 150000
+      }
+    },
+    "admin": {
+      "multisig": "PLACEHOLDER_ADMIN_ADDRESS",
+      "timelock": 86400,
+      "description": "Admin controls and timelock in seconds"
+    }
+  }
+}
